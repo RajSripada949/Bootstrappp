@@ -1,0 +1,25 @@
+/* All Selectors */
+/* 1.universal selector (*)
+2.Element Selector (div,h1,p) 
+3.Class SElect (.)
+4.ID Selector (#)
+5.Element with ID (div > #myId)
+6.Element with class selector (div>.myclass) */
+
+ /* div{
+    background-color: aqua;
+}  */
+  /* *{
+    background-color: chartreuse;
+ } */
+h1{
+   background-color:;
+    color:red;
+}
+ #myid{
+    background-color: aqua;
+    color:red;
+ }
+ .myclass{
+    background-color: greenyellow;
+ } 

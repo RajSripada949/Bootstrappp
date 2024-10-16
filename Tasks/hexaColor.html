@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hexa Color Generator</title>
+    <style>
+        .container{
+            display:flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            height:100vh;
+            background-color: white;
+        }
+        .hexaCard{
+            border:3px solid red;
+            background-color: rgb(168,165,165);
+            padding: 20px;
+            color:white;
+            border-radius:10px;
+        }
+        span{
+            font-size: 3rem;
+        }
+        #btn{
+            padding: 10px;
+            font-size: 1rem;
+            background-color: aqua;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="hexaCard">
+            <h1>Hexa Color Generator</h1>
+            <span id="colorGenerate">#ffffff</span>
+            <hr/>
+            <button id="btn">Generate</button>
+        </div>
+    </div>
+    
+</body>
+</html>

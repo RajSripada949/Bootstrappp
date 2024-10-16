@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation Examples</title>
+</head>
+<body>
+    <p id="mypara">This Element has <span>spacing</span></p>
+
+    <script>
+        let element = document.getElementById("mypara")
+
+        let content = element.innerHTML;
+
+       alert(content) 
+       content.innerHTML = "My Changed HTML"
+    </script>
+</body>
+</html>

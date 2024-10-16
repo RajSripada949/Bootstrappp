@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navigation Bar */
+header {
+    background-color: #333;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f39c12;
+}
+
+/* Section Styles */
+section {
+    padding: 50px;
+    text-align: center;
+}
+
+#about, #projects, #skills, #contact {
+    background-color: #f4f4f4;
+    margin-bottom: 20px;
+}
+
+/* Skills Section Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.skills-grid div {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 0 auto;
+}
+
+form label {
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+form input, form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #f39c12;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    form {
+        width: 100%;
+        padding: 0 20px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>Raj Sripada Portfolio</h2>
+            <p>I am Raj Sripada i am a python full stack developer i have skills in python,MySQL,FLASK,HTML&CSS,JavaScript,React,Node.js and i am a very quick learner and a enthusist coder.</p>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div>HTML</div>
+                <div>CSS</div>
+                <div>JavaScript</div>
+                <div>React</div>
+                <div>Node.js</div>
+                <div>SQL</div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>PortFolio project</h2>
+            <p><h1><center>Intelligent Invoice Processing System Using Tesseract OCR</center>
+            </h1>
+                An invoice is a commercial document issued by a seller to a buyer, providing a detailed break down of products with the prices. The traditional paper based invoice invoice processing is often time consuming, errorprone and costly, leading to details in payments & poor supplier relationship.
+                
+                Existing & Proposed Models: 
+                In this project we help them by retrieving the required data from the Invoice provided for analysis. In the Existing project the output text is extracted only in text fromat, JSON was not implemented and the accracy obtained was low. In our proposed model we are using JSON format, which is very efficient to use the data in other applications.
+                
+                Software Implementation:
+                In this project, we will extract the text from the invoice using Tesseract OCR engine. Tesseract OCR engine is a "Open Source Software Library" developed by google. It is designed to recognize and extract text from image or scanned documents.
+                
+                Implemented Algorithm:
+                 This project uses Tesseract, which internally uses LSTM algorithm, this algorithm extracts the data from the image. The activation functions used are softMax and Tanh
+                
+                Process:
+                It uses ML Algorithms to identify text in various languages and convert it into a machine readable format. In our project we aim to provide the O/P text in the structured format i.e JSON format.
+                
+                Conclusion:
+                The project utilizing Tesseract OCR outomates the extraction of relevent information from invoices, with preprocessing, OCR algorithms. The data validation module ensures accuracy and integrity and improves efficiency in Invoice processing.
+                THANKQ--</p>
+                <br />
+                <p><h1><center>2.Dent and Dust detevtion system in Automobile Industry.</center></h1> 
+                    This project is agenda is to detect the dents on the car's surface with computer image processing unit but not with manual testing.
+                    in our project we are implementing ML And Deep learning Algorithms such as CNN-RNN and Faster R-CNN, for better recognize of dentts we also used python library "Numpy".</p>
+        </section>
+         <!-- contact form section -->
+        <section id="contact" class="contact-section">
+            <h2>Contact me</h2>
+            <form class ="Contact-form" action="https://formspree.io/f/mdknrgao" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

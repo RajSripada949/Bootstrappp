@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation Examples</title>
+</head>
+<body>
+    <div id="mypara">
+        <p style="display: none">Hidden text</p>
+        This element has <span>spacing</span>
+    </div>
+    <button onclick="showText()">Show Full Content</button>
+<script>
+    let element = document.getElementById("mypara")
+    element.innerText = "Hi"
+</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors file</title>
+    <!-- external css -->
+    <link href="./selectors.css" rel="stylesheet" />
+</head>
+<!-- styling Preference :: Element Selector(body,Div) -> Id selector -> Class Selector-->
+<!-- Internal styling -->
+<style>
+    /* element selector */
+    h1 {
+        color: blue;
+        background-color: orange;
+    }
+
+    .myclass {
+        background-color: blueviolet;
+    }
+
+    #myId {
+        background-color: aqua;
+    }
+
+    body {
+        background-color: chartreuse;
+    }
+</style>
+
+<body style="background-color: red;">
+    <!-- styling Preference :: Element Selector(body,Div) -> Id Selector -> Class Selector-->
+    <!-- inline style -> Internal style -> External Style -->
+
+    <div class="myclass" id="myId">
+        <h1>Css Selectors Types</h1>
+        <!-- inline styling -->
+        <h3>
+            <p style="color:green;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam error facere ab
+                aliquam nisi sit debitis? Exercitationem tenetur eveniet cupiditate nesciunt animi perspiciatis
+                assumenda. Ex quo dolore quia omnis sunt.</p>
+        </h3>
+        <hr />
+        <!-- Universal Selector(*) -->
+    </div>
+
+</body>
+
+</html>

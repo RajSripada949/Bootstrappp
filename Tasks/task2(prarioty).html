@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Prefarance</title>
+    <link href="./task2.css" rel="stylesheet" />
+    <!-- internal style -->
+    <style>
+      /* Id<=Class<=element  Preference:Inline style <= Internal style <= External style */
+      /* element selector */
+      h1 {
+        background-color: red;
+      }
+      /* class selector */
+      .myClass {
+        background-color: yellow;
+      }
+      /* ID selector */
+      #myId {
+        background-color: olive;
+      }
+
+      /* internal style(main commits here) */
+      p {
+        color: red;
+      }
+
+      .container{
+            
+             display:flex;
+             flex-direction:column;
+
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="myId" class="myClass">Hello,Good Morning</h1>
+    <br />
+    <!-- inline style -->
+    <p style="color: aqua">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque nemo fugit
+      illum, autem eaque odit mollitia unde eligendi omnis harum natus, dolorum
+      ea vitae non molestias ipsam ad. Quas, ea.
+    </p>
+    <hr />
+    <div class="container">
+      <h1 style="background-color: yellow">First Heading</h1>
+      <button style="background-color: rgb(212, 138, 26)">Click</button>
+      <div style="background-color: rgb(210, 33, 62)">This is division</div>
+      <span style="background-color: orange">This is span</span>
+    </div>
+  </body>
+</html>
