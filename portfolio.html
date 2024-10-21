@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .profile-container {
+            display: flex;
+            align-items: center;
+        }
+        .profile-photo img {
+            width: 200px; /* Adjust width */
+            height: auto; /* Maintain aspect ratio */
+            max-height: 200px; /* Maximum height */
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .photo-preview {
+            display: none;
+        }
+        .photo-upload {
+            margin-top: 20px;
+        }
+        .delete-button {
+            margin-top: 10px;
+            padding: 5px 10px;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul class="navbar">
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- About Me Section -->
+    <section id="about" class="about-section">
+        <h1>About Me</h1>
+        <div class="profile-container">
+            <div class="profile-info">
+                <p>I'm Raj Sripada, a passionate Python full stack developer with a strong foundation in both front-end and back-end technologies. With expertise in HTML, CSS, JavaScript, MySQL, and Python, I enjoy creating seamless, responsive, and efficient web applications. My focus is on delivering clean, maintainable code while continuously learning new technologies to enhance my skills and stay up-to-date with industry trends.</p>
+            </div>
+            <div class="profile-photo">
+                <!-- Displaying Profile Photo -->
+                <img id="profile-image" src="" alt="Profile Photo" class="photo-preview">
+                <button id="delete-button" class="delete-button" style="display: none;">Delete Photo</button>
+            </div>
+        </div>
+        
+        <!-- Upload Form -->
+        <div class="photo-upload" id="photo-upload">
+            <h3>Upload Your Profile Photo</h3>
+            <form id="photo-form" action="javascript:void(0);">
+                <input type="file" id="profile-photo-input" accept="image/*" required>
+                <button type="submit">Upload Photo</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- JavaScript to Handle Upload and Deletion -->
+    <script>
+        const photoForm = document.getElementById('photo-form');
+        const fileInput = document.getElementById('profile-photo-input');
+        const profileImage = document.getElementById('profile-image');
+        const deleteButton = document.getElementById('delete-button');
+        const photoUploadSection = document.getElementById('photo-upload');
+
+        // Handle Photo Upload
+        photoForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const file = fileInput.files[0];
+            
+            if (file) {
+                const reader = new FileReader();
+
+                reader.onload = function(e) {
+                    profileImage.src = e.target.result;
+                    profileImage.style.display = 'block';  // Show the uploaded photo
+                    deleteButton.style.display = 'block';  // Show the delete button
+                    photoUploadSection.style.display = 'none';  // Hide the upload section
+                };
+
+                reader.readAsDataURL(file); // Convert the image file to a data URL
+            }
+        });
+
+        // Handle Photo Deletion
+        deleteButton.addEventListener('click', function() {
+            profileImage.src = '';  // Remove the photo
+            profileImage.style.display = 'none';  // Hide the photo
+            deleteButton.style.display = 'none';  // Hide the delete button
+            photoUploadSection.style.display = 'block';  // Show the upload section
+        });
+    </script>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <h2>My Skills</h2>
+        <div class="skills-grid">
+            <div class="skill">Python</div>
+            <div class="skill">MYSQL</div>
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+            <h1>Front End ----></h1>
+            <div class="project-card">Weather Application</div>
+            <div class="project-card">Quote Project</div>
+            <h1>MySQL ----></h1>
+            <div class="project-card">Insta Clone</div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="contact-section">
+        <h2>Contact Me</h2>
+        <form class="contact-form" action="https://formspree.io/f/mdknrgao" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="_replyto" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+</body>
+</html>
